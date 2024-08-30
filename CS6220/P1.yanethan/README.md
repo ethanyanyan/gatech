@@ -6,6 +6,7 @@ This project is part of an assignment to mine the Kaggle Million Songs dataset u
 
 ## Project Structure
 
+```
 P1.yanethan/
 │
 ├── data/
@@ -14,46 +15,38 @@ P1.yanethan/
 │ └── subsets/ # Different subsets of data (small, medium, large)
 │
 ├── notebooks/
-│ ├── 01_data_exploration.ipynb # Jupyter notebook for initial data exploration
-│ ├── 02_data_preprocessing.ipynb # Jupyter notebook for data preprocessing
-│ ├── 03_model_training.ipynb # Jupyter notebook for training models
-│ ├── 04_evaluation.ipynb # Jupyter notebook for evaluating model performance
-│ └── 05_experiments.ipynb # Jupyter notebook for running experiments
+│ └── data_exploration.ipynb # Jupyter notebook for initial data exploration
 │
 ├── scripts/
 │ ├── data_preprocessing.py # Script for data preprocessing
-│ ├── train_model.py # Script for model training
-│ ├── evaluate_model.py # Script for model evaluation
-│ └── run_experiments.py # Script for running experiments on different dataset sizes
-│ ├── results/
-│ ├── models/ # Saved models
-│ ├── logs/ # Logs of experiments and training
-│ └── reports/ # Evaluation reports and performance metrics
+│ ├── run_model.py # Script for training and evaluating the ALS model
+│ └── misc.py # Commonly used function declarations
+│
+├── results/
+│ ├── reports/ # Evaluation reports and performance metrics
+│ └── summary/ # Summary report of experiment
 │
 ├── requirements.txt # List of dependencies
 ├── README.md # Project documentation
 └── .gitignore # Ignore unnecessary files in git
+```
 
 ## Dataset
 
 - **URL:** [Million Song Dataset on Kaggle](http://www.kaggle.com/c/msdchallenge)
-- **Subset Used:**
-  - Initial Subset: 1000 users, 10,000 songs
-  - Medium Subset: 5,000 users, 50,000 songs
-  - Large Subset: 10,000 users, 100,000 songs
+- **Subsets Used:**
+  - **Small Subset:** 1000 users
+  - **Medium Subset:** 10,000 users
+  - **Large Subset:** 100,000 users
 
 ## Tools and Libraries
 
 - **Apache Spark:** Data processing and MLlib for machine learning.
 - **Jupyter Notebooks:** Development environment for exploration and analysis.
 - **Python:** General programming and scripting.
-- **Scikit-learn:** Machine learning library for model development.
-- **Pandas:** Data manipulation and processing.
-- **Matplotlib/Seaborn:** Visualization tools.
 
 ## Open Source Code Used
 
-- **Hadoop MapReduce Examples:** Adapted from [Hadoop Official Documentation](https://hadoop.apache.org/docs/current/hadoop-mapreduce-client/hadoop-mapreduce-client-core/MapReduceTutorial.html)
 - **Spark MLlib Examples:** Adapted from [Spark Official Documentation](https://spark.apache.org/examples.html)
 
 ## Model Selection: Considered Alternatives and Why ALS was Chosen
@@ -90,46 +83,44 @@ After considering the above alternatives, ALS was selected as the most suitable 
 
 ## Experiments
 
-### Experiment 1: Small Dataset (1000 users, 10,000 songs)
+### Experiment 1: Small Dataset (1000 users)
 
-- **Training Time:** X minutes
-- **Validation Accuracy (RMSE):** X
+- **Training Time:** 2.37 seconds
+- **Validation Accuracy (RMSE):** 7.4697
 
-### Experiment 2: Medium Dataset (5,000 users, 50,000 songs)
+### Experiment 2: Medium Dataset (10,000 users)
 
-- **Training Time:** X minutes
-- **Validation Accuracy (RMSE):** X
+- **Training Time:** 3.35 seconds
+- **Validation Accuracy (RMSE):** 8.6925
 
-### Experiment 3: Large Dataset (10,000 users, 100,000 songs)
+### Experiment 3: Large Dataset (100,000 users)
 
-- **Training Time:** X minutes
-- **Validation Accuracy (RMSE):** X
+- **Training Time:** 7.52 seconds
+- **Validation Accuracy (RMSE):** 8.5858
 
 ## Results
 
-- **Performance Trends:** As the dataset size increased, the model showed a trend of increasing/decreasing accuracy.
-- **Generalization:** Larger datasets generally provided better generalization but required more computational resources and time to train.
+- **Performance Trends:** The RMSE did not decrease with increasing dataset size, suggesting potential issues with data sparsity, model complexity, or the need for hyperparameter tuning.
+- **Generalization:** Larger datasets provided more complex models, but did not necessarily lead to better generalization without proper tuning.
 
-## Lessons Learned
+## Detailed Analysis (Lessons Learned and Observations)
 
-1. **Data Preprocessing is Key:** Proper handling of missing values and normalization significantly improved model performance.
-2. **Scalability Challenges:** As the dataset size increased, managing memory and ensuring efficient data processing became critical to avoid performance bottlenecks.
-3. **Model Selection:** The choice of algorithm, as well as careful tuning of hyperparameters, had a significant impact on the model’s predictive accuracy.
+For a more detailed analysis of the results, including data processing metrics, training metrics, and model evaluation, please refer to the `summary_results.md` file located in the `results/reports/` directory:
+
+- [Detailed Analysis: summary_results.md](results/reports/summary_results.md)
 
 ## How to Run the Project
 
 1. Clone this repository: `git clone <repository-url>`
-2. Install the required dependencies: `pip install -r requirements.txt`
-3. Download the dataset from Kaggle and place it in the `data/raw/` directory.
-4. Run the data preprocessing script: `python scripts/data_preprocessing.py`
-5. Train the model: `python scripts/train_model.py`
-6. Evaluate the model: `python scripts/evaluate_model.py`
-7. Run experiments: `python scripts/run_experiments.py`
+2. Navigate to folder `cd CS6220/P1.yanethan`
+3. Install the required dependencies: `pip install -r requirements.txt`
+4. Download the dataset from Kaggle and place it in the `data/raw/` directory.
+5. Run the data preprocessing script: `python scripts/data_preprocessing.py`
+6. Train and evaluate the model: `python scripts/run_model.py`
 
 ## References
 
 - [Spark MLlib Documentation](https://spark.apache.org/docs/latest/ml-guide.html)
-- [Scikit-learn Documentation](https://scikit-learn.org/stable/)
 
 ## Contact
 
