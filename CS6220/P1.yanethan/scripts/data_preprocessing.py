@@ -6,11 +6,10 @@ from pyspark.ml import Pipeline
 
 import misc
 
-os.environ['SPARK_HOME'] = '/usr/local/spark'
-
 # Start Spark
 spark = SparkSession.builder.appName("Million Song Mining").master("local[*]").getOrCreate()
 
+# Constant file paths
 path_to_dataset = "data/raw/kaggle_visible_evaluation_triplets.txt"
 subset_dir = "data/subsets/"
 processed_dir = "data/processed/"

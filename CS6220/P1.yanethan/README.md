@@ -115,8 +115,8 @@ For a more detailed analysis of the results, including data processing metrics, 
 2. Navigate to folder `cd CS6220/P1.yanethan`
 3. Install the required dependencies: `pip install -r requirements.txt`
 4. Download the dataset from Kaggle and place it in the `data/raw/` directory.
-5. Run the data preprocessing script: `python scripts/data_preprocessing.py`
-6. Train and evaluate the model: `python scripts/run_model.py`
+5. Run the data preprocessing script: `python3 scripts/data_preprocessing.py`
+6. Train and evaluate the model: `python3 scripts/run_model.py`
 
 ## References
 
