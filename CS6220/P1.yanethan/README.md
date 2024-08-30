@@ -111,7 +111,7 @@ For a more detailed analysis of the results, including data processing metrics, 
 
 ## How to Run the Project
 
-1. Clone this repository: `git clone <repository-url>`
+1. Clone this repository: `git clone https://github.com/ethanyanyan/gatech.git`
 2. Navigate to folder `cd CS6220/P1.yanethan`
 3. Install the required dependencies: `pip install -r requirements.txt`
 4. Download the dataset from Kaggle and place it in the `data/raw/` directory.
