@@ -1,0 +1,42 @@
+Training ALS model on small subset
+Number of Executors: 8
+Start Time: 2024-08-29 21:40:39
+End Time: 2024-08-29 21:40:42
+Duration: 2.37 seconds
+
+Evaluating ALS model on small subset
+Number of Executors: 8
+Start Time: 2024-08-29 21:40:42
+End Time: 2024-08-29 21:40:42
+Duration: 0.81 seconds
+
+RMSE for small subset: 7.4697
+
+Training ALS model on medium subset
+Number of Executors: 8
+Start Time: 2024-08-29 21:40:43
+End Time: 2024-08-29 21:40:46
+Duration: 3.35 seconds
+
+Evaluating ALS model on medium subset
+Number of Executors: 8
+Start Time: 2024-08-29 21:40:46
+End Time: 2024-08-29 21:40:47
+Duration: 1.13 seconds
+
+RMSE for medium subset: 8.6925
+
+Training ALS model on large subset
+Number of Executors: 8
+Start Time: 2024-08-29 21:40:48
+End Time: 2024-08-29 21:40:56
+Duration: 7.52 seconds
+
+Evaluating ALS model on large subset
+Number of Executors: 8
+Start Time: 2024-08-29 21:40:56
+End Time: 2024-08-29 21:40:58
+Duration: 2.48 seconds
+
+RMSE for large subset: 8.5858
+

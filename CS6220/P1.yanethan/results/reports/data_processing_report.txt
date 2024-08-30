@@ -1,0 +1,36 @@
+Creating small subset
+Number of Executors: 8
+Start Time: 2024-08-29 21:25:12
+End Time: 2024-08-29 21:25:15
+Duration: 3.06 seconds
+
+Creating medium subset
+Number of Executors: 8
+Start Time: 2024-08-29 21:25:15
+End Time: 2024-08-29 21:25:17
+Duration: 2.56 seconds
+
+Creating large subset
+Number of Executors: 8
+Start Time: 2024-08-29 21:25:17
+End Time: 2024-08-29 21:25:20
+Duration: 2.73 seconds
+
+Preprocessing small subset
+Number of Executors: 8
+Start Time: 2024-08-29 21:25:20
+End Time: 2024-08-29 21:25:25
+Duration: 4.82 seconds
+
+Preprocessing medium subset
+Number of Executors: 8
+Start Time: 2024-08-29 21:25:25
+End Time: 2024-08-29 21:25:30
+Duration: 5.66 seconds
+
+Preprocessing large subset
+Number of Executors: 8
+Start Time: 2024-08-29 21:25:30
+End Time: 2024-08-29 21:25:39
+Duration: 8.83 seconds
+

@@ -1,0 +1,23 @@
+# Virtualenv
+env/
+venv/
+.venv/
+
+# Compiled Python files
+*.pyc
+__pycache__/
+
+# VSCode
+.vscode/
+*.code-workspace
+
+# PyCharm
+.idea/
+
+# MacOS
+.DS_Store
+
+# Data files
+msdchallenge
+data/raw/
+
